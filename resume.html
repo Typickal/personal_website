@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hunter Pickrel's Resume</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Obtained from flaticon: https://www.flaticon.com/free-icons/web-development. Web-development icons created by Freepik - Flaticon.-->
     <style id="theme-styles">
         :root {
             --bg-color: #121212;
@@ -183,10 +185,10 @@
             <div>resume.sh</div>
         </div>
         <div class="terminal">
-            <div id="output">Welcome to my interactive resume terminal!
+            <div id="output">Welcome to my interactive personal resume website!
 Type '/help' to see available commands.</div>
             <div class="input-line">
-                <span class="prompt">visitor@hunter's_resume:~$</span>
+                <span class="prompt">visitor@hunter's_website:~$</span>
                 <input type="text" id="command-input" autofocus>
             </div>
         </div>
@@ -423,20 +425,21 @@ Available commands:
 /theme list     - List available themes
 /theme [name]   - Change terminal theme
 
+
 Linux-style commands:
+
 cat resume.txt  - Display full resume
 ls              - List available "files"
 clear           - Clear the terminal
 whoami          - Show name and title
 pwd             - Print working directory
 
-Try combining commands with pipes or redirects!
+More to come soon!
 `;
 
         // Initialize terminal
         function init() {
-            addOutput(`${resumeData.name} @ Terminal Resume`, 'section-header');
-            addOutput(`Type '/help' to see available commands.`);
+            addOutput(`${resumeData.name} @ Terminal Resume Website`, 'section-header');
             commandInput.addEventListener('keydown', handleCommand);
             applyTheme(currentTheme);
         }
@@ -472,7 +475,7 @@ Try combining commands with pipes or redirects!
                     historyIndex = commandHistory.length;
                     
                     // Display command
-                    addOutput(`<span class="prompt">visitor@resume:~$</span> <span class="command">${command}</span>`);
+                    addOutput(`<span class="prompt">visitor@hunter's_website:~$</span> <span class="command">${command}</span>`);
                     
                     // Process command
                     processCommand(command);
